@@ -1,0 +1,21 @@
+{
+  "name": "h60-hackwcu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "edge": "^7.10.1",
+    "express": "^4.16.4",
+    "express-edge": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "view": "gcloud app browse"
+  },
+  "author": "",
+  "license": "ISC"
+}

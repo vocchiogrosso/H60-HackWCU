@@ -1,0 +1,16 @@
+{
+    "name": "TikTock",
+    "version": "1.0",
+    "description": "Add Some Color To Your Time",
+    "manifest_version": 2,
+
+    "browser_action": {
+        "default_title": "Opens MyExtension",
+        "default_popup": "index.html"
+    },
+    "background": {
+        "scripts": ["index.js"],
+        "persistent": "Add Some Color To Your Time"
+    },
+    "permissions": ["activeTab", "declarativeContent", "storage","tabs"]
+}
