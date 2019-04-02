@@ -8,14 +8,13 @@ var clock = new Vue({
     }
 });
 
-clock.greeting = "Welcome Back, Vincent";
-
 var week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 var timerID = setInterval(updateTime, 1000);
 updateTime();
 function updateTime() {
     var cd = new Date();
     setGradient();
+    setGreeting();
     
     var TimeFormat = ["12","00","00","AM"]
     var DateFormat = ["MON","01","01","1969"]
@@ -46,6 +45,17 @@ function zeroPadding(num, digit) {
         zero += '0';
     }
     return (zero + num).slice(-digit);
+}
+
+function setGreeting(){
+    var cd = (new Date().getHours());
+    if(cd>0&&cd<11){
+        clock.greeting = "Good Morning";
+    }else if(cd>=11&&cd<=17){
+        clock.greeting = "Good Afernoon";
+    }else if(cd>=18&&cd<=24){
+        clock.greeting = "Good Evening";
+    }
 }
 
 function setGradient(){
@@ -106,34 +116,34 @@ function setGradient(){
             $("body").addClass("sky-gradient-16");
             break;
         case 17:
-            $("body").addClass("sky-gradient-18");
+            $("body").addClass("sky-gradient-17");
             break;
         case 18:
-            $("body").addClass("sky-gradient-19");
+            $("body").addClass("sky-gradient-18");
             $("#clock").css("color","white");
             break;
         case 19:
-            $("body").addClass("sky-gradient-20");
+            $("body").addClass("sky-gradient-19");
             $("#clock").css("color","white");
             break;
         case 20:
-            $("body").addClass("sky-gradient-21");
+            $("body").addClass("sky-gradient-20");
             $("#clock").css("color","white");
             break;
         case 21:
-            $("body").addClass("sky-gradient-22");
+            $("body").addClass("sky-gradient-21");
             $("#clock").css("color","white");
             break;
         case 22:
-            $("body").addClass("sky-gradient-23");
+            $("body").addClass("sky-gradient-22");
             $("#clock").css("color","white");
             break;
         case 23:
-            $("body").addClass("sky-gradient-24");
+            $("body").addClass("sky-gradient-23");
             $("#clock").css("color","white");
             break;
         case 24:
-            $("body").addClass("sky-gradient-10");
+            $("body").addClass("sky-gradient-24");
             $("#clock").css("color","white");
             break;
     }

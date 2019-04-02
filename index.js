@@ -13,7 +13,7 @@ app.set("views", `${__dirname}/views`);
 
 app.get('/',homePageController);
 
-app.listen(port, () => {
-  console.log("This site is live at: "+`http://localhost:${port}`);
+// Run On Port
+app.listen(process.env.PORT || port, () => {
+  console.log("App is live at: http://localhost:"+port+"/");
 });
-  
