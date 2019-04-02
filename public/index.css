@@ -27,7 +27,7 @@ p{margin: 0;padding: 0;}
     }
 
 
-/* Gradients */
+/*  Solid Gradients */
 .sky-gradient-00, .sky-gradient-24 { background: #00000c; }
 .sky-gradient-01 { background: linear-gradient(to bottom, #020111 85%,#191621 100%); }
 .sky-gradient-02 { background: linear-gradient(to bottom, #020111 60%,#20202c 100%); }
